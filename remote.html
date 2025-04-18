@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Remote Trigger</title>
+  </head>
+  <body>
+    <button onclick="send()">點我發送聲音</button>
+    <script>
+      const socket = new WebSocket("wss://your-websocket-url");
+      function send() {
+        socket.send("play");
+      }
+    </script>
+  </body>
+</html>
