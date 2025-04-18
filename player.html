@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>iMessage Player</title>
+  </head>
+  <body>
+    <audio id="sound" src="imessage.mp3"></audio>
+    <script>
+      const socket = new WebSocket("wss://your-websocket-url");
+      socket.onmessage = () => {
+        document.getElementById("sound").play();
+      };
+    </script>
+  </body>
+</html>
+
